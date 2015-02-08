@@ -8,7 +8,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.coffee$/, loader: "coffee" },
-      { test: /\.tag$/, loader: 'tag', query: {type: 'coffeescript'} }
+      { test: /\.tag$/, loader: 'tag'}
     ]
   },
 
