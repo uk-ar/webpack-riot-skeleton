@@ -5,7 +5,8 @@
   <ul>
     <li each={ items.filter(filter) }>
       <label class={ completed: done }>
-        <input type="checkbox" checked={ done } onclick={ parent.toggle }> { title }
+        <input type="checkbox" checked={ done } onclick={ parent.toggle }>
+           <raw content={parent.filter2(title)}/>
       </label>
     </li>
   </ul>
@@ -19,6 +20,10 @@
 
   edit(e) {
     this.text = e.target.value
+  }
+
+  filter2(title) {
+    return emoji(title,'http://localhost:8080')
   }
 
   add(e) {
